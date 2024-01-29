@@ -1,0 +1,701 @@
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather/Merriweather-Regular.woff2") format("woff2"),
+    url("../fonts/Merriweather/Merriweather-Regular.woff") format("woff");
+  font-display: swap;  
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText/GolosText-Regular.woff2") format("woff2"),
+    url("../fonts/GolosText/GolosText-Regular.woff") format("woff");
+  font-display: swap;  
+  font-style: normal;
+}
+
+
+/* Общий сброс (по идее) нужны файлы типа normalize.css reset.css */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+.hiddenHeader {
+	display: none;
+}
+
+.container {
+	max-width: 1366px;
+	margin: 0 auto;
+	padding-left: 72px;
+	padding-right: 72px;
+	
+}
+
+
+.headerWrapper {
+	max-width: 100%;
+	/* min-height: 700px; */
+	margin: 0 auto;
+	/* background-image: url('../img/headFonObshiy.png');
+	background-repeat: no-repeat;
+	background-size: cover; */
+	/* padding-bottom: 80px; */
+}
+
+.headBgImg {
+	min-height: 700px;	
+	background-image: url('../img/main.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;	
+}
+
+.headerContent {
+	display: flex;
+	flex-direction: column;
+	padding-top: 26px;
+}
+
+.headerLogoLink {
+	display: inline-block;
+	margin-bottom: 62px;
+}
+
+.headerLogoLink img {
+	vertical-align: top;
+}
+
+.headerTextBig {
+	max-width: 542px;
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: Merriweather;
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 110%; /* 66px */
+	text-transform: uppercase;
+	margin-bottom: 24px;	
+}
+
+.headerTextSmall {
+	max-width: 542px;
+	color: #313131;
+	text-align: center;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: "Golos Text";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%; /* 23.4px */
+	margin-bottom: 40px;	
+}
+
+.headerTextBig span {
+	display: inline-block;
+	width: 100%;
+	text-align: center;	
+}
+
+.headerTextBig span:last-child {
+	text-align: right;	
+}
+
+.HeaderButtonWrapper {		
+	font-family: "Golos Text";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	display: flex;	
+}
+
+.buttonFirst, .buttonSecond {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 223px;
+	height: 32px;
+	padding: 20px;	
+	border-radius: 66px;
+	border: 2px solid #1F1F1F;
+	text-align: center;
+	box-sizing: content-box;
+}
+
+.buttonFirst {
+	color: #FFF;
+	background: #1F1F1F;
+	margin-right: 16px;
+}
+
+.buttonFirst:hover {
+	color: #1F1F1F;
+	background: #FBCE51;
+}
+
+.buttonSecond {
+	color: #1F1F1F;
+}
+
+.buttonSecond:hover {
+	color: #FFF;
+	background: #1F1F1F;
+}
+
+.buttonFirst span {	
+	display: inline-block;
+	width: 165px;	
+}
+
+.buttonSecond span {	
+	display: inline-block;
+	width: 165px;	
+}
+
+.runLine {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	background: #F54932;
+	display: flex;
+	align-items: center;
+}
+
+.runLineContent {	
+	display: flex;
+	align-items: center;
+	padding: 18px 0;
+	color: #FFF;
+	text-align: right;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: Merriweather;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 110%; /* 24.2px */
+	text-transform: uppercase;
+	white-space: nowrap;
+	animation: run 18s linear infinite;
+}
+
+.dot {
+	display: flex;
+	align-items: center;	
+}
+
+.runLineItem {	
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	padding-right: 6px;
+	padding-left: 6px;
+	
+}
+
+@keyframes run {
+	0% {
+		transform: translateZ(0);
+	}
+	to {
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+
+.debutIdeaContent {
+	max-width: 1222px;	
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: Merriweather;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 135%; /* 48.6px */
+	text-transform: uppercase;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(394px, 764px));
+  grid-template-rows: auto auto auto auto;
+	grid-template-areas:
+  	'x c3'
+  	'c1 c3'
+  	'c2 c3'
+  	'z c3';
+	grid-gap: 0 64px;		
+}
+
+.debutContainer {
+	padding-top: 80px;
+	margin-bottom: 25.65px;
+}
+
+
+.debutIdeaImg img{
+	width: 100%;	
+	border-radius: 394px/250px;
+}
+
+.debutIdeaTextFirsr {
+	/* display: flex;
+	width: 764px; */				
+	grid-area: c1;
+	
+}
+
+.debutIdeaTextSecond {				
+	
+	word-spacing: 1px;
+	letter-spacing: 0.5px;
+	/* font-weight: 600; */
+	grid-area: c2;
+	
+}
+
+.red {
+	color: #F54932;
+}
+
+.debutIdeaTextFirsr span {
+	
+}
+
+.disp576 {
+	display: none;
+}
+
+.debutIdeaImg {	
+	grid-area: c3;	
+	width: 394px;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	align-self: center;
+}
+
+.seansPadding {
+	padding-left: 44.5px;
+	padding-bottom: 190px;
+	display: flex;
+	align-items: center;
+}
+
+.seansImg {
+	max-width: 530px;
+	min-width: 300px;
+	/* max-height: 568px; */
+	margin-right: 16.5px;
+	display: flex;
+	object-fit: fill;	
+	
+}
+
+.seansImg img {
+	
+	width: 100%;
+	height: 568px;
+}
+
+.seansContent {
+	padding-top: 27.51px;
+	
+}
+
+.seansHead {
+	max-width: 704px;
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: Merriweather;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 135%; /* 48.6px */
+	text-transform: uppercase;
+	margin-bottom: 60px;
+}
+
+.seansHead span {
+	color: #F54932;
+	font-weight: 700;
+}
+
+.seansList {
+	padding: 0;
+	list-style: none;
+	margin-bottom: 48px;
+}
+
+.seansList li {
+	display: flex;
+}
+
+.seansList1, .seansList2 {
+	display: block;
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: "Golos Text";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; /* 24px */
+	width: 290px;
+	max-width: 290px;
+	box-sizing: content-box;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.seansList1 {
+	opacity: 0.7;
+	padding-right: 16px;
+}
+
+.seansList2 {
+	font-weight: 600;
+	border-left: 1px solid #D0D0D0;
+	padding-left: 16px;
+}
+
+.seansHid2, .seansHid4 {
+	display: none;
+}
+
+.cross {	
+	text-decoration: line-through;
+	text-decoration-color: #F54932;
+}
+
+.seansList li:not(:last-child) {
+	border-bottom: 1px solid #D0D0D0;
+}
+
+.seansList li:first-child span {
+	padding-top: 0;
+}
+
+.seansList li:last-child span{
+	padding-bottom: 0;
+}
+
+.seansFooter {
+	color: #3057A2;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: "Golos Text";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; /* 24px */
+}
+
+.stagesBigText {
+	max-width: 806px;
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: Merriweather;
+	font-size: 54px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; /* 64.8px */
+	text-transform: uppercase;
+}
+
+.stagesSmallText {
+	display: inline-block;
+	max-width: 290px;
+	color: #3057A2;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: "Golos Text";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; /* 24px */
+	text-transform: none;
+}
+
+.stagesTextWrapper {
+	margin-bottom: 54px;
+}
+
+.forSlider {
+	padding-bottom: 200px;
+}
+
+.sliderContainer {
+	position: relative;
+}
+
+.stagesSlider {
+	max-width: 1366px;
+	/* position: relative; */
+	overflow: visible;	
+	display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(112px, auto));
+  grid-template-areas:
+  	'card1 card2 card3'
+  	'card4 card5 card3'
+  	'card6 card7 card7';
+  	grid-gap: 20px;   	
+}
+
+
+.plane {
+	width: 374px;
+	position: absolute;
+	left: 72%;
+	bottom: 0;
+}
+
+.plane img {
+	width: 100%;
+}
+
+.sladeCard {	
+	padding:  20px 20px 20px 72px;	
+	box-shadow: 5px 4px 12.7px 0px rgba(0, 0, 0, 0.25);	
+	display: flex;	
+}
+
+.stagesSliderButWrapper {
+	display: none;
+}
+
+.slideText {			
+	width: 302px;
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: "Golos Text";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 120%; 	
+}
+
+.card1 {
+	grid-area: card1;	
+	background: url('../img/number1.png'), url('../img/slider1Fon.png');
+	background-position: 20px 20px, center;
+	background-repeat: no-repeat, repeat;
+}
+
+.card2 {
+	grid-area: card2;	
+	background: url('../img/number2.png'), url('../img/slider1Fon.png');
+	background-position: 20px 20px, center;
+	background-repeat: no-repeat, repeat;
+}
+
+.card3 {
+	grid-area: card3;	
+	min-height: 244px;
+	background: url('../img/number3.png'), url('../img/slider1Fon.png');
+	background-position: 20px 20px, center;
+	background-repeat: no-repeat, repeat;
+	align-self: stretch;	
+}
+
+.card4 {
+	grid-area: card4;		
+	background: url('../img/number4.png'), url('../img/slider1Fon.png');
+	background-position: 20px 20px, center;
+	background-repeat: no-repeat, repeat;
+}
+
+.card5 {
+	grid-area: card5;		
+	background: url('../img/number5.png'), url('../img/slider1Fon.png');
+	background-position: 20px 20px, center;
+	background-repeat: no-repeat, repeat;
+}
+
+.card6 {
+	grid-area: card6;		
+	background: url('../img/number6.png'), url('../img/slider1Fon.png');
+	background-position: 20px 20px, center;
+	background-repeat: no-repeat, repeat;
+}
+
+.card7 {
+	grid-area: card7;
+	max-width: 803px;		
+	background: url('../img/number7.png'), url('../img/slider1Fon.png');
+	background-position: 20px 20px, center;
+	background-repeat: no-repeat, repeat;
+}
+
+.slideText7 {
+	width: 446px;
+}
+
+/* Слай	дер Участники турнира */
+
+.swiper {
+  width: 100%;
+  /* height: 300px; */
+}
+
+.forSlider2 {
+	position: relative;
+	padding-bottom: 140px;
+}
+
+.swiper-button-prev, .swiper-button-next, .swiper-pagination{
+	width: 44px!important;
+	height: 44px!important;
+	position: static!important;
+	margin: 0!important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.swiper-pagination span {
+	color: #313131;	
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: "Golos Text";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; 
+	margin-right: 3px;
+}
+
+.swiper-pagination span:last-child {	
+	opacity: 0.6; 
+	margin-left: 3px;
+}
+
+.swiper-pagination {
+	margin-right: 14px!important;
+	margin-left: 14px!important;
+	width: 35px!important;
+}
+
+.participantHeaderText {
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: Merriweather;
+	font-size: 54px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; 
+	text-transform: uppercase;
+}
+
+.participantHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 60px;
+}
+
+.swiper-button-prev::after {
+	content: "";
+	width: 44px;
+	height: 44px;
+	background-image: url('../img/slideNazad.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.swiper-button-next::after {
+	content: "";
+	width: 44px;
+	height: 44px;
+	background-image: url('../img/slideVpered.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.sliderNavigation {
+	display: flex;
+	align-items: center;
+}
+
+
+
+.slideImg {
+	max-width: 360px;
+	/* height: 320px; */
+	flex-shrink: 0;	
+	text-align: center;
+	margin-bottom: 28px;
+}
+
+.slideImg img {
+	width: 100%;
+}
+
+.swiperSlideStyle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+
+.slideText1 {
+	margin-bottom: 6px;
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: "Golos Text";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%;
+	white-space: nowrap;	 
+}
+
+.slideText2 {
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: "Golos Text";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; 
+	opacity: 0.6;
+	margin-bottom: 20px;
+	white-space: nowrap;	
+}
+
+.slideButton {
+	color: #3057A2;	
+	font-family: "Golos Text";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px; 
+	padding: 10px 12px;
+	border-radius: 62px;
+	border: 1px solid #3057A2;	
+}
+
+.slideButton:hover {
+	color: #FFF;
+	background: #3057A2;
+}
+
+.wrapperrunLine {
+	padding: 0;
+}
+
+.footerContainer {
+	padding: 0;
+	background: #E9DED4;
+	padding: 40px 72px  72px 72px;
+}
+
+.footerText {
+	max-width: 1222px;
+	color: #313131;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: "Golos Text";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;	 	
+}
